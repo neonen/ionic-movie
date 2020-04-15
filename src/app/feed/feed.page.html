@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>feed</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let filme of lista_filmes">
+    <ion-card-header>
+      <img [src]="'https://image.tmdb.org/t/p/w500/' + filme.backdrop_path">
+      <ion-card-title class="titulo">{{filme.title}}</ion-card-title>
+      <ion-card-subtitle>{{filme.release_date}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{filme.overview}}  
+    </ion-card-content>
+  </ion-card>  
+    
+</ion-content>

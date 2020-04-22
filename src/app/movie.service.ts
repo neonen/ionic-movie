@@ -22,9 +22,14 @@ export class MovieService {
     
   }
 
-  getMovie(){
-    let url = `${this.base_url}movie/popular?api_key=${this.key}&language=${this.language}`;
+  getMovie(page = 1){
+    let url = `${this.base_url}movie/popular?page=${page}&api_key=${this.key}&language=${this.language}`;
     return this.service(url);
     //return this.http.get(url,{},{});
+  }
+
+  getMovieId(id){
+    let url = `${this.base_url}movie/${id}?api_key=${this.key}&language=${this.language}`;
+    return this.service(url);
   }
 }

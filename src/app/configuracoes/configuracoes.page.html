@@ -1,0 +1,19 @@
+<ion-menu  side="start" type="push" menuId="first" contentId="main">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item (click) = "goToPage('perfil')">Perfil</ion-item>
+      <ion-item (click) = "goToPage('sobre')">Sobre</ion-item>
+      
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main"></ion-router-outlet>
+<ion-header>
+</ion-header>
+
